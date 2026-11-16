@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="min-h-screen bg-crema pb-24 font-texto text-azul-noche dark:bg-azul-noche dark:text-crema">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-azul-noche focus:px-4 focus:py-2 focus:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Saltar al contenido principal</a>
+
+    <header class="border-b-2 border-gris-asfalto/40 bg-white dark:border-crema/20 dark:bg-crema/10">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4 py-4">
+            <a href="inicio.html" class="font-titulos text-xl font-bold uppercase tracking-wide text-azul-noche dark:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Rueda Libre</a>
+            <button type="button" id="menu-boton" aria-expanded="false" aria-controls="menu-principal" class="rounded-lg border-2 border-azul-noche p-2 text-azul-noche md:hidden dark:border-crema dark:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">
+                <span class="sr-only">Mostrar u ocultar el menú</span>
+                <svg aria-hidden="true" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+            <nav id="menu-principal" aria-label="Principal" class="hidden w-full md:block md:w-auto">
+                <ul class="flex flex-col gap-2 md:flex-row md:items-center md:gap-6">
+                    <li><a href="inicio.html" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche" aria-current="page">Inicio</a></li>
+                    <li><a href="tarifas.html" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Tarifas</a></li>
+                    <li><a href="tarifas.html#planes" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Planes</a></li>
+                    <li><a href="reservas.html" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Reservas</a></li>
+                    <li><a href="index.html" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Ruta nocturna</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section id="inicio" class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid items-center gap-8 md:grid-cols-2">
+                <div class="order-2 space-y-4 md:order-1">
+                    <h1 class="font-titulos text-3xl font-bold uppercase tracking-wide leading-tight text-azul-noche sm:text-4xl lg:text-5xl dark:text-amarillo-farol">Rueda Libre</h1>
+                    <p class="max-w-2xl text-base leading-relaxed text-gris-asfalto sm:text-lg dark:text-crema/80">Bienvenido al mejor sitio de alquiler de bicicletas de Medellín.</p>
+                    <a href="#encuentranos" class="btn-secundario">Ver ubicación de la tienda</a>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="../img/icono-aislado-dibujo-de-la-bicicleta-83199925.webp" alt="Logo de Rueda Libre: bicicleta dorada con el texto Rueda Libre" width="600" height="600" class="mx-auto w-full max-w-sm rounded-xl">
+                </div>
+            </div>
+        </section>
+
+        <section aria-roledescription="carrusel" aria-label="Promociones" class="pb-10 sm:pb-12 lg:pb-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div data-carrusel class="relative overflow-hidden rounded-xl border-2 border-gris-asfalto/40 dark:border-crema/20">
+                    <div data-carrusel-pista aria-live="off">
+                <div data-carrusel-slide data-activa role="group" aria-roledescription="diapositiva" aria-label="1 de 3" class="relative hidden data-activa:block">
+                    <img src="../img/urbanaclasica.jpeg" alt="Bicicleta urbana clásica" width="1408" height="768" class="aspect-[1408/768] w-full object-cover">
+                    <div class="absolute inset-x-4 bottom-4 rounded-lg bg-azul-noche/75 p-3 text-center text-crema sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2 sm:px-8">
+                        <p class="font-titulos text-base font-bold sm:text-lg">Día completo desde $50.000</p>
+                        <p class="text-sm sm:text-base">Alquila una bicicleta urbana todo el día.</p>
+                    </div>
+                </div>
+                <div data-carrusel-slide role="group" aria-roledescription="diapositiva" aria-label="2 de 3" class="relative hidden data-activa:block">
+                    <img src="../img/plegable.jpeg" alt="Bicicleta urbana plegable" width="1408" height="768" class="aspect-[1408/768] w-full object-cover">
+                    <div class="absolute inset-x-4 bottom-4 rounded-lg bg-azul-noche/75 p-3 text-center text-crema sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2 sm:px-8">
+                        <p class="font-titulos text-base font-bold sm:text-lg">Casco y candado sin costo</p>
+                        <p class="text-sm sm:text-base">Cada alquiler los incluye.</p>
+                    </div>
+                </div>
+                <div data-carrusel-slide role="group" aria-roledescription="diapositiva" aria-label="3 de 3" class="relative hidden data-activa:block">
+                    <img src="../img/montanatrail.jpeg" alt="Bicicleta de montaña trail" width="1408" height="768" class="aspect-[1408/768] w-full object-cover">
+                    <div class="absolute inset-x-4 bottom-4 rounded-lg bg-azul-noche/75 p-3 text-center text-crema sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2 sm:px-8">
+                        <p class="font-titulos text-base font-bold sm:text-lg">Recorridos guiados</p>
+                        <p class="text-sm sm:text-base">Sábados y domingos a las 7:00 a. m.</p>
+                    </div>
+                </div>
+                    </div>
+                    <button type="button" data-carrusel-anterior class="absolute top-1/2 -translate-y-1/2 rounded-full bg-azul-noche/75 p-3 text-crema hover:bg-azul-noche focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche left-3"><svg aria-hidden="true" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg><span class="sr-only">Anterior</span></button>
+                    <button type="button" data-carrusel-siguiente class="absolute top-1/2 -translate-y-1/2 rounded-full bg-azul-noche/75 p-3 text-crema hover:bg-azul-noche focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche right-3"><svg aria-hidden="true" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="sr-only">Siguiente</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid items-center gap-8 md:grid-cols-2">
+                <div class="space-y-4">
+                    <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema">¿Quiénes somos?</h2>
+                    <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Somos Rueda Libre, un equipo de apasionados por la vida sobre dos ruedas. Nos dedicamos a conectar a locales y viajeros con la ciudad de una forma activa, ecológica y divertida, ofreciendo bicicletas de excelente calidad para que disfrutes cada kilómetro del camino.</p>
+                </div>
+                <img src="../img/icono-aislado-dibujo-de-la-bicicleta-83199925.webp" alt="" width="600" height="600" class="mx-auto w-full max-w-xs rounded-xl">
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-6">
+                <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema">Nuestros servicios</h2>
+                <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <li class="relative flex flex-col rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10 p-6">
+                    <span class="absolute -top-3 right-4 rounded-full bg-naranja-pedal px-3 py-1 font-titulos text-xs font-bold uppercase tracking-wider text-azul-noche">Nuevo</span>
+                    <div class="flex flex-1 flex-col gap-3">
+                        <p><strong class="font-titulos text-azul-noche dark:text-crema">Alquiler por horas o días:</strong> <span class="leading-relaxed text-gris-asfalto dark:text-crema/80">Bicicletas urbanas, de montaña (MTB) y eléctricas que se adaptan a tu ritmo.</span></p>
+                    </div>
+                </li>
+                <li class="relative flex flex-col rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10 p-6">
+                    
+                    <div class="flex flex-1 flex-col gap-3">
+                        <p><strong class="font-titulos text-azul-noche dark:text-crema">Tours guiados:</strong> <span class="leading-relaxed text-gris-asfalto dark:text-crema/80">Recorridos por los puntos más emblemáticos e históricos de la ciudad.</span></p>
+                        <a href="tarifas.html#planes" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Ver los planes disponibles</a>
+                        <img src="../img/images.jpeg" alt="Ilustración de una ruta con curvas, una flecha y un marcador de destino sobre una bicicleta" width="600" class="mt-auto h-40 w-full rounded-lg object-cover">
+                    </div>
+                </li>
+                <li class="relative flex flex-col rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10 p-6">
+                    
+                    <div class="flex flex-1 flex-col gap-3">
+                        <p><strong class="font-titulos text-azul-noche dark:text-crema">Equipamiento completo:</strong> <span class="leading-relaxed text-gris-asfalto dark:text-crema/80">Cada alquiler incluye casco, candado de alta seguridad y mapa de ciclorrutas sin costo adicional.</span></p>
+                    </div>
+                </li>
+                <li class="relative flex flex-col rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10 p-6">
+                    
+                    <div class="flex flex-1 flex-col gap-3">
+                        <p><strong class="font-titulos text-azul-noche dark:text-crema">Asistencia en ruta:</strong> <span class="leading-relaxed text-gris-asfalto dark:text-crema/80">Soporte mecánico rápido si llegas a tener cualquier imprevisto durante tu viaje.</span></p>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="flota" class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-6">
+                <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema">Nuestra flota</h2>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10">
+                    <img src="../img/urbanaclasica.jpeg" alt="Bicicleta urbana clásica" width="1408" height="768" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col gap-3 p-6">
+                        <h3 class="font-titulos text-xl font-bold leading-tight text-azul-noche dark:text-crema">Bicicleta Urbana Clásica</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Redescubre el placer de moverte sin prisas. La bicicleta clásica urbana es mucho más que un medio de transporte: es una declaración de estilo, libertad y confort. Diseñada para quienes disfrutan el camino tanto como el destino.</p>
+                        <p class="font-titulos text-2xl font-bold text-azul-noche dark:text-amarillo-farol">$10.000 por hora</p>
+                        <a href="reservas.html" class="btn-primario mt-auto w-full">Reservar<span class="sr-only"> Bicicleta Urbana Clásica</span></a>
+                    </div>
+                </article>
+                <article class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10">
+                    <img src="../img/plegable.jpeg" alt="Bicicleta urbana plegable" width="1408" height="768" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col gap-3 p-6">
+                        <h3 class="font-titulos text-xl font-bold leading-tight text-azul-noche dark:text-crema">Bicicleta Urbana Plegable</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">La bicicleta urbana plegable es la llave para dominar la ciudad sin límites. Olvídate de buscar estacionamiento o preocuparte por los robos. Llévala en el metro, súbela al autobús o guárdala bajo tu escritorio. Es el vehículo definitivo para el nómada urbano moderno.</p>
+                        <p class="font-titulos text-2xl font-bold text-azul-noche dark:text-amarillo-farol">$12.000 por hora</p>
+                        <a href="reservas.html" class="btn-primario mt-auto w-full">Reservar<span class="sr-only"> Bicicleta Urbana Plegable</span></a>
+                    </div>
+                </article>
+                <article class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10">
+                    <img src="../img/montanatrail.jpeg" alt="Bicicleta de montaña trail" width="1408" height="768" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col gap-3 p-6">
+                        <h3 class="font-titulos text-xl font-bold leading-tight text-azul-noche dark:text-crema">Bicicleta Montaña Trail</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Domina cada sendero, conquista cada montaña. La bicicleta de Trail definitiva está diseñada para quienes no temen ensuciarse y buscan la máxima emoción en la naturaleza. No sigas la ruta: crea la tuya.</p>
+                        <p class="font-titulos text-2xl font-bold text-azul-noche dark:text-amarillo-farol">$15.000 por hora</p>
+                        <a href="reservas.html" class="btn-primario mt-auto w-full">Reservar<span class="sr-only"> Bicicleta Montaña Trail</span></a>
+                    </div>
+                </article>
+                <article class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10">
+                    <img src="../img/GravelAventura.jpeg" alt="Bicicleta de tipo Gravel Aventura" width="1408" height="768" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col gap-3 p-6">
+                        <h3 class="font-titulos text-xl font-bold leading-tight text-azul-noche dark:text-crema">Bicicleta Gravel Aventura</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">El asfalto se termina, pero tu viaje no. La bicicleta de Gravel Aventura es la compañera definitiva para los inconformistas, los viajeros de fin de semana y los cazadores de atardeceres. Diseñada para devorar kilómetros, sin importar la superficie.</p>
+                        <p class="font-titulos text-2xl font-bold text-azul-noche dark:text-amarillo-farol">$18.000 por hora</p>
+                        <a href="reservas.html" class="btn-primario mt-auto w-full">Reservar<span class="sr-only"> Bicicleta Gravel Aventura</span></a>
+                    </div>
+                </article>
+                <article class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10">
+                    <img src="../img/El%C3%A9ctricaUrbana.jpeg" alt="Bicicleta eléctrica urbana" width="1408" height="768" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col gap-3 p-6">
+                        <h3 class="font-titulos text-xl font-bold leading-tight text-azul-noche dark:text-crema">Bicicleta Eléctrica Urbana</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Imagina cruzar la ciudad volando, sin importar las cuestas ni las distancias. La bicicleta eléctrica urbana transforma tu trayecto diario en el mejor momento del día. Siente el impulso de su motor inteligente y muévete por la ciudad con una sonrisa, sin sudar una sola gota.</p>
+                        <p class="font-titulos text-2xl font-bold text-azul-noche dark:text-amarillo-farol">$25.000 por hora</p>
+                        <a href="reservas.html" class="btn-primario mt-auto w-full">Reservar<span class="sr-only"> Bicicleta Eléctrica Urbana</span></a>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="rutas" class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-6">
+                <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema">Galería de rutas</h2>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10">
+                    <img src="../img/urbanaclasica.jpeg" alt="Bicicleta urbana clásica" width="1408" height="768" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col gap-3 p-6">
+                        <h3 class="font-titulos text-xl font-bold leading-tight text-azul-noche dark:text-crema">Río y parques</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Recorrido de 12 km con una duración de 2 horas. Nivel: fácil.</p>
+                        <p class="font-titulos text-2xl font-bold text-azul-noche dark:text-amarillo-farol">$45.000 por persona</p>
+                        <a href="reservas.html" class="btn-primario mt-auto w-full">Reservar<span class="sr-only"> Río y parques</span></a>
+                    </div>
+                </article>
+                <article class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10">
+                    <img src="../img/GravelAventura.jpeg" alt="Bicicleta de tipo Gravel Aventura" width="1408" height="768" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col gap-3 p-6">
+                        <h3 class="font-titulos text-xl font-bold leading-tight text-azul-noche dark:text-crema">Sabores de barrio</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Recorrido de 18 km con una duración de 3 horas. Nivel: medio.</p>
+                        <p class="font-titulos text-2xl font-bold text-azul-noche dark:text-amarillo-farol">$60.000 por persona</p>
+                        <a href="reservas.html" class="btn-primario mt-auto w-full">Reservar<span class="sr-only"> Sabores de barrio</span></a>
+                    </div>
+                </article>
+                <article class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10">
+                    <img src="../img/montanatrail.jpeg" alt="Bicicleta de montaña trail" width="1408" height="768" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col gap-3 p-6">
+                        <h3 class="font-titulos text-xl font-bold leading-tight text-azul-noche dark:text-crema">Reto Las Palmas</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Recorrido de 25 km con una duración de 4 horas. Nivel: difícil.</p>
+                        <p class="font-titulos text-2xl font-bold text-azul-noche dark:text-amarillo-farol">$85.000 por persona</p>
+                        <a href="reservas.html" class="btn-primario mt-auto w-full">Reservar<span class="sr-only"> Reto Las Palmas</span></a>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-6">
+                <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema">¿Cómo alquilar?</h2>
+                <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">¡Es súper fácil y te toma menos de 5 minutos!</p>
+                <ol class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <li class="space-y-2">
+                        <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">1</p>
+                        <p><strong class="font-titulos text-azul-noche dark:text-crema">Elige tu bici:</strong> <span class="leading-relaxed text-gris-asfalto dark:text-crema/80">Selecciona el modelo ideal según tu plan del día.</span></p>
+                    </li>
+                    <li class="space-y-2">
+                        <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">2</p>
+                        <p><strong class="font-titulos text-azul-noche dark:text-crema">Presenta tu documento:</strong> <span class="leading-relaxed text-gris-asfalto dark:text-crema/80">Solo necesitas una identificación oficial vigente (cédula o pasaporte).</span></p>
+                    </li>
+                    <li class="space-y-2">
+                        <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">3</p>
+                        <p><strong class="font-titulos text-azul-noche dark:text-crema">Define el tiempo:</strong> <span class="leading-relaxed text-gris-asfalto dark:text-crema/80">Alquila por horas o por días completos.</span></p>
+                    </li>
+                    <li class="space-y-2">
+                        <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">4</p>
+                        <p><strong class="font-titulos text-azul-noche dark:text-crema">¡A rodar!:</strong> <span class="leading-relaxed text-gris-asfalto dark:text-crema/80">Ajustamos la altura del sillín a tu medida y estarás listo para salir a explorar.</span></p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-6">
+                <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema text-center">Nuestros beneficios</h2>
+                <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <li class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10 gap-3 p-6">
+                        <h3 class="font-titulos text-lg font-bold leading-tight text-azul-noche dark:text-crema">Bicicletas revisadas</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Bicicletas completamente puestas a punto y verificadas para asegurar un recorrido fluido y sin fallas mecánicas.</p>
+                        <span class="mt-auto self-start rounded-md bg-verde-ruta px-3 py-1 text-sm font-semibold text-crema">Soporte mecánico en ruta</span>
+                    </li>
+                    <li class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10 gap-3 p-6">
+                        <h3 class="font-titulos text-lg font-bold leading-tight text-azul-noche dark:text-crema">Casco y candado incluidos</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Bicicleta revisada, casco y candado incluidos para rodar con total seguridad y tranquilidad.</p>
+                        <span class="mt-auto self-start rounded-md bg-verde-ruta px-3 py-1 text-sm font-semibold text-crema">Sin costo adicional</span>
+                    </li>
+                    <li class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10 gap-3 p-6">
+                        <h3 class="font-titulos text-lg font-bold leading-tight text-azul-noche dark:text-crema">Guías certificados</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Guías locales capacitados que garantizan una experiencia segura, enriquecedora y libre de contratiempos en la ruta.</p>
+                        <span class="mt-auto self-start rounded-md bg-verde-ruta px-3 py-1 text-sm font-semibold text-crema">Sábados y domingos, 7:00 a. m.</span>
+                    </li>
+                    <li class="relative flex flex-col overflow-hidden rounded-xl border-2 border-gris-asfalto/40 bg-white shadow-md hover:border-naranja-pedal hover:shadow-2xl dark:border-crema/20 dark:bg-crema/10 gap-3 p-6">
+                        <h3 class="font-titulos text-lg font-bold leading-tight text-azul-noche dark:text-crema">Puntos de devolución en tres sedes</h3>
+                        <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Posibilidad de entregar la bicicleta en cualquiera de nuestras tres sedes al finalizar el recorrido, simplificando la logística del viaje.</p>
+                        <span class="mt-auto self-start rounded-md bg-verde-ruta px-3 py-1 text-sm font-semibold text-crema">3 sedes</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center gap-4 rounded-xl bg-azul-noche p-6 text-center text-crema md:flex-row md:justify-between md:text-left dark:border-2 dark:border-crema/20">
+                    <div class="space-y-1">
+                        <h2 class="font-titulos text-2xl font-bold">¿Listo para rodar?</h2>
+                        <p>Reserva tu bicicleta hoy y sal a explorar Medellín.</p>
+                    </div>
+                    <a href="reservas.html" class="btn-primario">Reservar ahora</a>
+                    <img src="../img/montanatrail.jpeg" alt="" width="200" height="109" class="hidden w-48 rounded-lg md:block">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-4">
+                <h2 id="encuentranos" class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema">Encuéntranos</h2>
+                <p class="max-w-3xl leading-relaxed text-gris-asfalto dark:text-crema/80">Nuestra tienda principal está ubicada en la <strong class="font-semibold text-azul-noche dark:text-crema">Calle 10 #43E-20, El Poblado (a solo dos cuadras de la estación del Metro).</strong> Abrimos todos los días, de lunes a domingo, desde las <strong class="font-semibold text-azul-noche dark:text-crema">8:00 a. m. hasta las 8:00 p. m.</strong> ¡Te esperamos!</p>
+                <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Consulta nuestros precios en la <a href="tarifas.html" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">página de tarifas</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t-2 border-gris-asfalto/40 bg-white dark:border-crema/20 dark:bg-crema/10">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-6 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10">
+            <div class="space-y-2">
+                <p class="font-titulos text-xl font-bold uppercase tracking-wide text-azul-noche dark:text-amarillo-farol">Rueda Libre</p>
+                <p class="text-sm text-gris-asfalto dark:text-crema/80">Alquiler de bicicletas en Medellín.</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Horario</p>
+                <p class="font-semibold">Lunes a domingo, de 8:00 a. m. a 8:00 p. m.</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Contacto</p>
+                <p><a href="mailto:holaruedalibre@gmail.com" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Escribir a holaruedalibre@gmail.com</a></p>
+                <p><a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Escribir por WhatsApp</a></p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Ubicación</p>
+                <p><a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjg1uWv4MmXAxUAAAAAHQAAAAAQCQ..i&amp;channel=fs&amp;client=ubuntu-sn&amp;udm&amp;fvr=1&amp;pvq=CgwvZy8xcHR6aF8wanIiKAoidGllbmRhIGRlIGJpY2ljbGV0YXMgZW4gZWwgcG9ibGFkbxACGAM&amp;lqi=CiJ0aWVuZGEgZGUgYmljaWNsZXRhcyBlbiBlbCBwb2JsYWRvSJeE_ufnlYCACFoyEAAQARACEAMQBBAFGAIiInRpZW5kYSBkZSBiaWNpY2xldGFzIGVuIGVsIHBvYmxhZG-SAQ1iaWN5Y2xlX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJFYnpoTFdYRm5SUkFC-gEECAAQRA&amp;cs=1&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=co&amp;sa=X&amp;ftid=0x8e44284b8a0a7ffb:0x15b79b80bc8778a6" target="_blank" rel="noopener noreferrer" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Ver Rueda Libre en Google Maps</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 z-40 rounded-lg bg-azul-noche px-5 py-3 font-titulos font-bold text-crema shadow-lg hover:bg-verde-ruta dark:bg-amarillo-farol dark:text-azul-noche dark:hover:bg-naranja-pedal focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>

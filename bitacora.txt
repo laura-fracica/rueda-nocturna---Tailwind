@@ -1,0 +1,333 @@
+1. url		: http://127.0.0.1:5500/index.html
+- protocolo	: http://
+-host		: 127.0.0.1
+-puerto		: 5500
+-ruta		: /index.html
+-metodo de peticion:GET
+-codigo de estado: 304 Not Modified
+
+2. 404 Not Found - significa que la pagina no fue encontrada debido a que no existe.
+
+3. html - es el encargado de la maquetacion del proyecto, estructura y contenido, css es quien
+define la apariencia visual, el JavaScript es quien nos da las funcionalidades. 
+
+    MINI RETO - DIA 2 
+
+    index.html
+header:
+|-title
+|-img
+
+MAIN    
+|-section 1 - ¿Quienes somos?
+|-section 2 - Nuestros servicios 
+|-section 3 - ¿como alquilar?
+|-section 3 - encuentranos 
+
+FOOTER 
+|-direccion
+|-contactanos por email
+
+
+--------------------------------------------------------------
+    reservas.html
+NAV
+|-inicio
+|-tarifas
+|-rutas
+|-reservaS
+
+-----*****RESERVAS SIN ERRORES:*****-----
+Tabla de prueba 
+envio en blanco: pide llenar datos.
+documento con numero 12: pide llenar campo completo 
+fecha superior a la permitida:pide modificacion
+numero de bicicletas superior a la permitida: pide editar
+enviar sin aceptar: pide enviar 
+
+SEMANA 2 -------------------------------------------------------------}
+Estrecha poco a poco la ventana del navegador y describe en la bitácora qué ocurre con el encabezado y el pie. Haz commit y push.
+Al hacer dicha accion el texto va cambiando de renglon acomodandose al tamaño de la pagina. 
+
+
+
+
+
+========================================================
+MINI RETO 8 - AUDITORIA DE ACCESIBILIDAD (v0.2)
+========================================================
+Idioma: las tres paginas ya tienen lang="es". Sin cambios.
+
+Hallazgos y correccion:
+1. index.html - alt="bicicleta" en imagen decorativa -> alt="" (el contenido ya esta en el texto).
+2. index.html y tarifas.html - alt="logo de tienda de bicicletas" poco descriptivo -> "Logo de Rueda Libre: pinon de bicicleta con el texto Bike Shop".
+3. index.html - alt="imagen de ruta de bicicleta" -> describe la ilustracion: ruta con curvas, flecha y marcador de destino sobre una bicicleta.
+4. index.html - enlace "click aqui" -> "Ver ubicacion de la tienda".
+5. index.html - enlaces "Google maps" y "GMAIL" -> "Ver Rueda Libre en Google Maps" y "Escribir a holaruedalibre@gmail.com".
+6. tarifas.html - sin h1 en la jerarquia de encabezados -> se agrego <h1>Tarifas de Rueda Libre</h1>.
+7. tarifas.html - enlace "RESERVAR AHORA" con el texto repetido fuera del enlace -> un solo enlace "Reservar ahora".
+8. reservas.html - los mailto no tenian "mailto:" (enlace roto) y el texto "GMAIL" -> href="mailto:..." y texto "Escribir un correo a Rueda Libre".
+9. reservas.html - menu con el texto repetido ("Inicio Inicio", etc.) -> un solo enlace por opcion.
+10. reservas.html (teclado/lectores) - label for="docuemento", for="opciones" y for="cantidaddebicicleta" no coincidian con ningun id -> corregidos para que al enfocar o hacer clic en la etiqueta se active su campo.
+
+CONTRASTE (calculado con la formula WCAG 2.x)
+Colores usados: Verde Ruta #1F7A4D, Naranja Pedal #F26B21, Azul Noche #14213D, Crema #FFF4E0, Gris Asfalto #4A4F57
+(valores de trabajo: verificar contra WebAIM con los HEX oficiales de la marca)
+
+Combinacion                          Ratio    Clasificacion
+Blanco sobre Verde Ruta              5.32:1   Apta texto normal
+Blanco sobre Naranja Pedal           3.04:1   Apta solo texto grande
+Azul Noche sobre Naranja Pedal       5.25:1   Apta texto normal
+Azul Noche sobre Crema              14.66:1   Apta texto normal
+Gris Asfalto sobre Crema             7.56:1   Apta texto normal
+Verde Ruta sobre Crema               4.88:1   Apta texto normal
+Naranja Pedal sobre Crema            2.79:1   No apta
+Blanco sobre Azul Noche             15.97:1   Apta texto normal
+(Crema sobre Azul Noche tiene el mismo ratio que Azul Noche sobre Crema: 14.66:1)
+
+MAPA DE USO DE COLOR
+- Texto principal: Azul Noche sobre Crema.
+- Texto secundario: Gris Asfalto sobre Crema.
+- Fondo de pagina: Crema.
+- Enlaces de texto: Verde Ruta sobre Crema, subrayados. Al pasar el mouse: Azul Noche.
+- Botones: texto Azul Noche sobre fondo Naranja Pedal. Hover/foco: texto Crema sobre fondo Azul Noche.
+- Encabezados de tabla y estado hover del menu: texto Crema sobre fondo Azul Noche.
+- Naranja Pedal nunca como texto sobre Crema (no apta); solo como fondo con texto Azul Noche.
+- Blanco: aprobado sobre Verde Ruta y Azul Noche, pero no se usa porque la paleta del CSS tiene solo los cinco colores de marca.
+
+PUBLICACION
+- GitHub Pages desde la rama main: https://laura-fracica.github.io/modulo-html-css/
+- Recorrido en linea: (completar tras publicar)
+
+
+========================================================
+MINI RETO 9 - IDENTIDAD VISUAL
+========================================================
+- css/styles.css enlazado en las tres paginas (css/styles.css en index.html y ../css/styles.css en paginas/), despues de las fuentes de Google (Montserrat y Open Sans, con preconnect).
+- Variables en :root: 5 colores, 2 familias con respaldo y escala --espacio-1 a --espacio-4 (rem).
+- body aplica fuente, color y fondo con var(); los encabezados usan un solo selector agrupado (h1, h2, h3, h4, h5, h6).
+- Sin style="" ni <style> en los HTML.
+
+Comprobacion de herencia en un <p> (DevTools > Computed):
+- Se hereda: font-family (Open Sans) y color (Azul Noche), definidos solo en body.
+- No se hereda: background-color (el <p> queda transparente; la crema se ve porque es la del body detras).
+(Resultado segun las reglas del CSS; confirmar en DevTools.)
+
+========================================================
+MINI RETO 10 - NAVEGACION CON ESTADOS
+========================================================
+Conflicto "la clase no funciona":
+  #menu a   -> especificidad (1,0,1)
+  .activo   -> especificidad (0,1,0)
+Causa: un id pesa mas que cualquier cantidad de clases, asi que #menu a gana y la declaracion color de .activo aparece tachada en DevTools.
+Solucion (sin !important ni estilos en linea): #menu a.activo -> (1,1,1).
+Detalle de cascada: #menu a:hover y #menu a.activo valen igual (1,1,1); gana el que va despues en el archivo, por eso los estados :hover/:focus estan debajo de .activo.
+
+Estados (todos con contraste >= 4.5:1):
+- Menu: Gris Asfalto sobre Crema (7.56). Activo: Verde Ruta sobre Crema (4.88) en negrita. Hover/foco: Crema sobre Azul Noche (14.66).
+- Enlaces de texto: Verde Ruta sobre Crema (4.88); hover Azul Noche sobre Crema (14.66).
+- Boton .boton-cta y botones del formulario: Azul Noche sobre Naranja Pedal (5.25); hover/foco Crema sobre Azul Noche (14.66).
+- Foco visible: contorno de 3px Azul Noche con separacion en enlaces, botones, campos y listas desplegables; los campos tambien cambian el borde al pasar el mouse.
+Pendiente de hacer en el navegador: recorrer las tres paginas con Tab y revisar estados con el boton :hov.
+
+========================================================
+MINI RETO 11 - MODELO DE CAJA
+========================================================
+- box-sizing: border-box en *, *::before y *::after.
+- main: max-width 60rem y margenes laterales automaticos. Portada de inicio: min-height 60vh.
+- Servicios en tarjetas (.tarjeta): relleno, borde de 1px, esquinas redondeadas y margen inferior con la escala de espaciado; su imagen usa width 100%.
+- Tablas: relleno en celdas, bordes de 1px y encabezado Crema sobre Azul Noche.
+- Formulario: etiqueta sobre cada campo (display block), campos al 100% del ancho, separacion entre grupos y boton con relleno generoso.
+- Menu en fila: #menu li { display: inline-block }.
+- En px solo quedan bordes y contornos.
+
+Medicion del ancho de una tarjeta (pantalla ancha: main = 60rem = 960px; relleno 1.5rem = 24px por lado; borde 1px):
+  content-box: 960 + 24 + 24 + 1 + 1 = 1010px (se sale del contenedor)
+  border-box : 960px
+(Valores calculados; confirmar en DevTools > Computed.)
+Nota: la tarjeta tiene width:100% para que el cambio de box-sizing se note en la medicion.
+
+========================================================
+MINI RETO 12 - RUEDA LIBRE v1.0
+========================================================
+- Etiqueta "Nuevo": position absolute dentro de la tarjeta (position relative), en la esquina superior derecha, sin desplazar el contenido. Se puso en la tarjeta "Alquiler por horas o dias", que es la que menciona las bicicletas electricas.
+- Enlace "WhatsApp" (https://wa.me/573000000000, otra pestana) con position fixed abajo a la derecha en las tres paginas; el body tiene relleno inferior para que no tape el final.
+- styles.css organizado en secciones comentadas: variables, base, navegacion, componentes y formulario; selectores repetidos agrupados.
+- Verificado: sin !important, sin estilos en linea, todas las var() definidas, ningun color fuera de :root.
+
+Resumen de la semana:
+ 1 repositorio y pagina base | 2 pagina de inicio | 3 tarifas con tablas y rutas relativas | 4 sitio navegable v0.1
+ 5 estructura semantica | 6 formulario | 7 validacion y teclado | 8 accesibilidad, mapa de color y publicacion v0.2
+ 9 hoja de estilos con variables | 10 menu con estados | 11 modelo de caja | 12 posicionamiento y v1.0
+Mejoraria: que el formulario envie de verdad (hoy no hay servidor), version para pantallas pequenas y optimizar el peso de las imagenes.
+
+URL v1.0 (GitHub Pages): https://laura-fracica.github.io/modulo-html-css/
+
+========================================================
+MINI RETO dia 1 - RUEDA LIBRE v1.0
+========================================================
+-al estrechar la ventana vemos como el contenido se acomoda mas no se corta. 
+
+========================================================
+MINI RETO dia 2 - RUEDA LIBRE v1.0
+========================================================
+- tiempo invertido: 30 min
+- líneas de CSS de distribución de la flota en tu versión propia frente a clases usadas ahora: 12 líneas de CSS aproximadas (usando propiedades como display: flex, flex-wrap: wrap, margin, padding para gutters
+- que te dio Bootstrap sin esfuerzo y qué control perdiste: Responsividad inmediata y fluida en todos los dispositivos, cálculo automático y matemático de los anchos de las columnas, y un sistema de espaciado interno estandarizado 
+
+
+
+========================================================
+MINI RETO dia 3 - UTILIDADES DE BOOTSTRAP
+========================================================
+Pagina: pruebas/catalogo-bootstrap.html (debajo de la flota). Sin style="", sin <style> y sin clases propias en la seccion de beneficios ni en la franja final.
+
+Cinco clases buscadas en la documentacion de Bootstrap 5.3 (buscador de getbootstrap.com):
+1. flex-md-row - cambia flex-direction a row desde el breakpoint md (768px). Junto a flex-column hace que la franja sea columna en celulares y fila desde md.
+2. justify-content-md-between - desde md reparte los elementos de la franja a lo largo del eje principal, con el espacio sobrante entre ellos.
+3. d-none + d-md-block - d-none oculta el elemento (display: none) y d-md-block lo vuelve a mostrar como bloque desde md. Se uso en la imagen decorativa de la franja.
+4. gap-3 - deja un espacio de 1rem entre los hijos de un contenedor flex o grid, sin usar margenes en cada hijo.
+5. text-bg-success - pone fondo verde y escoge solo el color de texto con buen contraste (blanco). Se uso en el dato destacado de cada beneficio.
+
+Mapa de uso de color llevado a Bootstrap (la paleta de Bootstrap no es la de la marca, asi que se usan los colores mas cercanos por rol):
+- Titulo del beneficio: texto principal (color de texto por defecto, oscuro) con fw-bold fs-5.
+- Descripcion: texto secundario -> text-secondary (equivale a Gris Asfalto).
+- Dato destacado: texto blanco sobre fondo verde -> text-bg-success (equivale a Blanco sobre Verde Ruta, aprobado).
+- Franja: texto claro sobre fondo oscuro -> text-bg-dark (equivale a Crema/Blanco sobre Azul Noche).
+- Enlace de la franja: texto oscuro sobre fondo naranja/amarillo -> bg-warning text-dark (equivale a Azul Noche sobre Naranja Pedal; el naranja solo como fondo, nunca como texto).
+
+
+========================================================
+MINI RETO dia 4 - BOOTSTRAP EN INICIO + CONFLICTOS
+========================================================
+Orden de carga en index.html: fuentes de Google -> bootstrap.min.css -> css/styles.css (la hoja propia va despues, asi a igual especificidad gana la mia). El bundle JS va al final del body.
+
+Inicio ahora usa grilla y utilidades en: portada (row/col, order-*, img-fluid), flota, rutas, beneficios y franja final (d-flex, flex-column flex-md-row, gap-3).
+Reglas borradas de styles.css: .portada { min-height }. Las reglas de header, main, #menu, button, tablas y formulario se dejaron con un comentario porque todavia las usan tarifas.html y reservas.html (esas paginas no cargan Bootstrap).
+
+Conflictos encontrados (Styles / Computed) y como se resolvieron, sin !important:
+
+1. Mis botones contra los controles del carrusel
+   - Sintoma: al pasar el mouse o enfocar con Tab, los controles anterior/siguiente se pintaban de Azul Noche (rgb(20, 33, 61)) y, con el teclado, no se veia ningun contorno.
+   - Causa: mi regla button:hover/button:focus (0,1,1) le gana al background: none de .carousel-control-prev (0,1,0). Ademas Bootstrap pone outline: 0 en .carousel-control-prev:focus (0,2,0), que tacha mi outline de 3px de button:focus (0,1,1).
+   - Solucion: en styles.css, despues de Bootstrap, reglas .carousel-control-*:hover/:focus con fondo transparente (0,2,0, y van despues) y .carousel-control-*:focus-visible con contorno de 3px Crema.
+
+2. El boton de WhatsApp quedaba debajo del carrusel
+   - Sintoma: al llegar al carrusel, el centro del boton de WhatsApp (position: fixed, sin z-index) recibia el clic del control "siguiente".
+   - Causa: Bootstrap da z-index: 1 a .carousel-control-prev/next y mi .whatsapp tenia z-index: auto, asi que el control quedaba encima.
+   - Solucion: z-index: 1030 en .whatsapp (el mismo nivel que usa Bootstrap para elementos fijos).
+
+3. Colores de Bootstrap contra colores de marca
+   - Sintoma: text-secondary, text-bg-success, bg-warning y bg-dark salian en gris #6c757d, verde #198754, amarillo #ffc107 y gris #212529 en vez de la paleta de Rueda Libre.
+   - Causa: esas utilidades leen las variables --bs-secondary-rgb, --bs-success-rgb, --bs-warning-rgb y --bs-dark-rgb definidas en :root por Bootstrap.
+   - Solucion: redefinirlas en :root de styles.css (que carga despues, misma especificidad): Gris Asfalto, Verde Ruta, Naranja Pedal y Azul Noche. Resultado: rgb(74, 79, 87), rgb(31, 122, 77), rgb(242, 107, 33), rgb(20, 33, 61). Los contrastes de la bitacora del reto 8 siguen valiendo (blanco sobre Verde Ruta 5.32; Azul Noche sobre Naranja 5.25).
+
+Otros ajustes (sin conflicto real, anotados):
+- main { max-width: 60rem } contra .container: con main class="container" gana la clase (0,1,0 contra 0,0,1), el ancho lo da la grilla.
+- Enlaces: a { color: Verde Ruta } y a:hover { Azul Noche } ganan al color de enlace de Bootstrap por ir despues; si styles.css se cargara antes, los enlaces saldrian azules.
+- main ul { padding: 0 } (0,0,2) le gana al padding-left: 2rem de ul en Bootstrap (0,0,1); es la declaracion tachada que se ve en las listas.
+- header { display: flex } (todavia lo usa reservas) hacia que las filas de la portada se encogieran: se envolvieron en un div w-100.
+
+Pruebas de inicio (360, 768 y 1280 px):
+- Sin scroll horizontal en los tres anchos.
+- Portada: 360 una columna (logo arriba); 768 y 1280 dos columnas.
+- Columnas por fila a 360 / 768 / 1280 px (medidas en el navegador): flota 1 / 2 / 4; rutas 1 / 2 / 3; beneficios 1 / 2 / 4. En cada fila las cards miden lo mismo (h-100).
+- Franja final: en columna y sin imagen a 360; en fila y con imagen a 768 y 1280.
+- Teclado: Tab llega a los controles Anterior y Siguiente del carrusel y al boton de WhatsApp; con el contorno de la solucion 1 el foco se ve en los controles.
+
+
+========================================================
+MINI RETO dia 5 - NAVBAR Y BOTONES DE BOOTSTRAP
+========================================================
+Navbar (index.html, paginas/tarifas.html y paginas/reservas.html):
+- nav.navbar.navbar-expand-lg > .container > a.navbar-brand + button.navbar-toggler + div.collapse.navbar-collapse > ul.navbar-nav > li.nav-item > a.nav-link.
+- El boton usa data-bs-toggle="collapse", data-bs-target="#menu-principal" y aria-controls igual; el div colapsable tiene id="menu-principal" (igual en las tres paginas). aria-label="Mostrar u ocultar el menu"; Bootstrap actualiza aria-expanded solo.
+- Pagina actual: clase "active" + aria-current="page" en el nav-link (reemplaza la clase "activo" y las reglas #menu de styles.css, que se borraron). En tarifas solo se marca "Tarifas"; "Planes" es un ancla de esa misma pagina y no lleva aria-current.
+- tarifas.html y reservas.html ahora cargan Bootstrap (CSS antes de styles.css). Los tres archivos cargan el bundle de JS una sola vez, como ultimo elemento del body (comprobado: 1 peticion y 1 etiqueta script por pagina).
+
+Botones: btn-primary = reservar (tarjetas de flota y rutas, franja final, ENVIAR del formulario, Reservar ahora de tarifas); btn-outline-dark = consultar (ver ubicacion, planes, Google Maps, correo y contacto); btn-dark = WhatsApp flotante. Tamanos: btn-lg en las acciones principales de pagina (franja, Reservar ahora, ENVIAR), tamano normal en las tarjetas y en el correo de reservas, btn-sm en los enlaces de consulta. Los colores de cada variante se redefinen con las variables --bs-btn-* en styles.css (naranja con Azul Noche para reservar; Azul Noche con Crema al pasar el mouse).
+Se dejaron como enlaces de texto los que van dentro de una frase (Inicio en tarifas, tarifas al final de inicio).
+
+Conflictos nuevos y solucion (sin !important):
+1. La regla global button (naranja, hover Azul Noche) ya no tenia sentido con btn: el toggler de la navbar se habria pintado de Azul Noche al pasar el mouse (button:hover pesa 0,1,1 y .navbar-toggler no define fondo en hover). Se borro la regla global de button y de .boton-cta; los botones salen de las variantes btn-*.
+2. header { display: flex } (solo lo usaba reservas) encogia las filas de la portada: se borro y reservas usa d-flex, flex-wrap, justify-content-between y align-items-center.
+3. Bootstrap pone caption-side: bottom: las tablas de tarifas mostraban el titulo abajo. Se agrego caption { caption-side: top } en styles.css (despues de Bootstrap).
+4. main { max-width: 60rem } ya no lo usa ninguna pagina (las tres tienen main.container): se borro.
+5. Hover/foco del menu: .navbar .nav-link:hover y :focus-visible (0,3,0) van despues de .nav-link.active (0,3,0) para que el enlace activo tambien se vea Crema sobre Azul Noche al pasar el mouse.
+
+Prueba del menu a 360 px (navegador automatizado, mismas 3 paginas):
+- Mouse: el boton abre y cierra los enlaces (aria-expanded true al abrir).
+- Teclado: Tab llega al boton, Enter abre, Tab recorre Inicio, Tarifas, Planes y Reservas, y Enter sobre el boton cierra.
+- 991 px: boton visible y enlaces ocultos; 992 px: enlaces visibles y sin boton.
+
+Errores de validez que se corrigieron al tocar estas paginas:
+- tarifas.html: <caption> de Planes fuera de la tabla.
+- reservas.html: target=""_blank" del enlace de correo; fecha con type="number" y min/max de fechas (ahora type="date"); cantidad con type="cantidad" (ahora text con inputmode numerico y el mismo pattern); casilla de politicas con type="politicas" (ahora checkbox con sus etiquetas); comentarios sin id; input vacio de tipo button sobrante; <dd> sueltos en el footer (ahora <p>). El validador da 0 errores en index, tarifas y reservas.
+
+========================================================
+MINI RETO - TAILWIND (nocturna/prototipo.html)
+========================================================
+Boton "Inscribete" con Bootstrap (semana 2): <a class="btn btn-primary btn-lg" href="paginas/reservas.html">Inscribete</a>. Las clases btn y btn-primary ya traen el color, el relleno y el borde, y solo se cambiaron las variables --bs-btn-* en styles.css.
+
+Boton "Inscribete" con Tailwind (hoy): <a class="inline-block w-48 px-6 py-3 mt-4 text-center font-bold uppercase tracking-wider bg-orange-500 text-slate-900" href="../paginas/reservas.html">Inscribete</a>. Cada clase hace una sola cosa (ancho, relleno, color, tipografia) y hubo que juntarlas para que pareciera un boton.
+
+Diferencia clave: un framework de componentes como Bootstrap trae piezas ya hechas (btn) y para cambiarlas hay que sobrescribir su CSS, mientras que uno utility-first como Tailwind solo da utilidades pequenas y el diseno se arma en el HTML sin escribir CSS propio.
+
+========================================================
+MINI RETO - INSCRIPCION EN LA LANDING (Tailwind)
+========================================================
+Tiempo real: ____ min de 40 (completar con tu cronometro)
+- Seccion "Inscripcion" en nocturna/index.html con encabezado (h2 y descripcion) y formulario agrupado en 4 fieldset con legend: Datos personales, Tu ruta, Tipo de bicicleta y Confirmacion.
+- Controles: nombre (text), correo (email), celular (tel), ruta (select), fecha (date), acompanantes (number), tipo de bicicleta (radio) y aceptacion (checkbox). Cada uno con su label asociado.
+- Reglas: todo required; nombre minlength 3; celular pattern 3[0-9]{9} con title; acompanantes min 0 y max 8; fecha min 2026-11-07, max 2026-11-28 y step 7 (solo sabados de noviembre).
+- Estilo: clase .campo del kit, dos columnas desde md (grid md:grid-cols-2), modo oscuro con dark: y foco con focus:.
+
+Pruebas (Chromium, medidas):
+- Formulario vacio: no se envia; marca nombre, correo, celular, ruta, fecha, acompanantes, bicicleta y acepto, y lleva el foco al primer campo.
+- Datos invalidos rechazados: nombre de 2 letras (tecleado), celular que empieza por 2, celular de 9 digitos, correo sin @, fecha que no es sabado, fecha fuera de noviembre, 9 y -1 acompanantes.
+- Datos validos aceptados: celular 3121234567 y 8 acompanantes.
+- Solo con teclado: Tab recorre nombre > correo > celular > ruta > fecha > acompanantes > bicicleta > acepto > Inscribirme; Enter envia y aparece la confirmacion.
+- Pendiente de tu lado: repetir la prueba a mano en el navegador y anotar el tiempo.
+
+========================================================
+MINI RETO - INTEGRACION SITIO + LANDING
+========================================================
+Tiempo real: ____ min de 40 (completar)
+- "Rueda Nocturna" agregado a la navbar de index.html (nocturna/index.html), paginas/tarifas.html y paginas/reservas.html (../nocturna/index.html).
+- Cuarta diapositiva del carrusel con el boton "Conoce la ruta nocturna" hacia la landing.
+- En la landing: el logo lleva a ../index.html y el boton "Reserva tu bici" a ../paginas/reservas.html; "Ver tarifas" a ../paginas/tarifas.html.
+- Marca: mismos colores en :root (css/styles.css) y @theme (nocturna/input.css); se agrego --amarillo-farol al sitio para que coincidan los seis. Mismas fuentes. Pie con los mismos datos de contacto (correo holaruedalibre@gmail.com, WhatsApp, horario y mapa); se corrigio el correo de ejemplo que tenia reservas.html.
+- Verificacion local: 8 clics entre carpetas con resultado correcto; 142 enlaces locales revisados.
+- Verificacion en GitHub Pages: pendiente hasta hacer push (hoy lo publicado es la version anterior, sin Rueda Nocturna).
+
+========================================================
+MINI RETO - SECCION DE PLANES
+========================================================
+Tiempo real: ____ min de 45 (completar)
+- Grilla de una columna en celular y tres desde lg (grid-cols-1 lg:grid-cols-3), cards de la misma altura.
+- Cada card es una columna (flex flex-col): la lista de beneficios usa flex con gap-3 y el boton queda siempre al final (mt-auto).
+- Plan Pareja destacado: borde de 4px de color, fondo distinto y etiqueta "Mas elegido" con position absolute, sin mover las demas cards.
+- Medicion en 1280 px: las tres cards miden 347 x 386 px, con relleno de 24 px y arriba en la misma posicion. En 360 px miden 328 x 386 px. El borde del plan destacado es de 4px y el de los otros de 2px.
+- Modo oscuro: borde y fondo en amarillo farol; contraste de texto minimo 4.88:1.
+- Pendiente de tu lado: revisar las medidas en DevTools (Computed) y anotar el tiempo.
+
+========================================================
+MINI RETO - VERIFICACION FINAL
+========================================================
+Tiempo real: ____ min (completar)
+- Validador del W3C (Nu Html Checker): landing y reservas con 0 errores y 0 advertencias. Antes: reservas tenia 1 error (aria-labelledby en un div sin role) y 1 advertencia (section sin encabezado); tarifas tenia 27 advertencias por scope en td. Se corrigio con role="dialog", un h1 y th scope="row".
+- Responsive 360, 768 y 1280: sin desbordes en claro y oscuro.
+- Contraste: landing con minimo 4.88:1 en 109 textos, en claro y oscuro.
+- Teclado: todas las paradas con Tab muestran foco visible; el campo de fecha usa el recuadro nativo del navegador en el icono del calendario.
+- Sin estilos en linea; nocturna/output.css minificado.
+- Capturas en img/capturas/: landing-escritorio.png, landing-celular.png y landing-oscuro.png.
+- README.md con descripcion, enlaces, paginas, tecnologias, recomendacion de framework, capturas, aprendizajes y autora.
+- Publicacion: hacer commit de lanzamiento y push, y verificar en GitHub Pages (pendiente).
+
+Guion de la demo (3 minutos):
+ 0:00 Contexto: Rueda Libre alquila bicicletas en Medellin y quiere ofrecer la ruta nocturna.
+ 0:30 Sitio: inicio, carrusel con la cuarta diapositiva y clic en "Rueda Nocturna".
+ 1:00 Landing: planes con "Mas elegido" y formulario de inscripcion; enviar vacio y luego completo con teclado.
+ 2:00 Vista en celular y modo oscuro.
+ 2:30 Decisiones tecnicas: (1) validacion nativa con required, pattern, min, max y step en vez de JavaScript; (2) Bootstrap para el sitio y Tailwind para la landing con la misma marca en :root y @theme.
+Retroalimentacion del ensayo con un companero: (completar)

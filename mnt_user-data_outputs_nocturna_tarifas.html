@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifas | Rueda Libre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="min-h-screen bg-crema pb-24 font-texto text-azul-noche dark:bg-azul-noche dark:text-crema">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-azul-noche focus:px-4 focus:py-2 focus:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Saltar al contenido principal</a>
+
+    <header class="border-b-2 border-gris-asfalto/40 bg-white dark:border-crema/20 dark:bg-crema/10">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4 py-4">
+            <a href="inicio.html" class="font-titulos text-xl font-bold uppercase tracking-wide text-azul-noche dark:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Rueda Libre</a>
+            <button type="button" id="menu-boton" aria-expanded="false" aria-controls="menu-principal" class="rounded-lg border-2 border-azul-noche p-2 text-azul-noche md:hidden dark:border-crema dark:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">
+                <span class="sr-only">Mostrar u ocultar el menú</span>
+                <svg aria-hidden="true" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+            <nav id="menu-principal" aria-label="Principal" class="hidden w-full md:block md:w-auto">
+                <ul class="flex flex-col gap-2 md:flex-row md:items-center md:gap-6">
+                    <li><a href="inicio.html" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Inicio</a></li>
+                    <li><a href="tarifas.html" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche" aria-current="page">Tarifas</a></li>
+                    <li><a href="tarifas.html#planes" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Planes</a></li>
+                    <li><a href="reservas.html" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Reservas</a></li>
+                    <li><a href="index.html" class="inline-block border-b-4 border-transparent px-1 py-1 text-sm font-semibold uppercase tracking-wider text-azul-noche hover:text-verde-ruta aria-[current=page]:border-naranja-pedal dark:text-crema dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Ruta nocturna</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section class="py-10 sm:py-12 lg:py-16">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-10">
+                <h1 class="font-titulos text-3xl font-bold uppercase tracking-wide leading-tight text-azul-noche sm:text-4xl lg:text-5xl dark:text-amarillo-farol">Tarifas de Rueda Libre</h1>
+                <div class="space-y-3">
+                    <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema">Tarifas por hora</h2>
+                    <div class="overflow-x-auto rounded-xl border-2 border-gris-asfalto/40 bg-white dark:border-crema/20 dark:bg-crema/10">
+                        <table class="w-full border-collapse text-left">
+                            <caption class="sr-only">Tarifas por hora</caption>
+                            <thead class="bg-azul-noche text-left text-crema">
+                                <tr><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">Tipo de bicicleta</th><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">1 hora</th><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">Medio día (4 h)</th><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">Día completo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row" class="border-2 border-gris-asfalto/40 px-4 py-3 text-left font-semibold dark:border-crema/20">Urbana</th><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">10.000</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">30.000</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">50.000</td></tr>
+                                <tr><th scope="row" class="border-2 border-gris-asfalto/40 px-4 py-3 text-left font-semibold dark:border-crema/20">Montaña</th><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">15.000</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">45.000</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">70.000</td></tr>
+                                <tr><th scope="row" class="border-2 border-gris-asfalto/40 px-4 py-3 text-left font-semibold dark:border-crema/20">Eléctrica</th><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">25.000</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">70.000</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">110.000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <h2 id="planes" class="font-titulos text-2xl font-bold uppercase tracking-wide text-azul-noche sm:text-3xl dark:text-crema">Planes de recorridos</h2>
+                    <div class="overflow-x-auto rounded-xl border-2 border-gris-asfalto/40 bg-white dark:border-crema/20 dark:bg-crema/10">
+                        <table class="w-full border-collapse text-left">
+                            <caption class="sr-only">Planes de recorridos</caption>
+                            <thead class="bg-azul-noche text-left text-crema">
+                                <tr><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">Recorrido</th><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">Distancia</th><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">Duración</th><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">Nivel</th><th scope="col" class="px-4 py-3 font-titulos text-sm font-bold uppercase tracking-wider">Precio por persona</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row" class="border-2 border-gris-asfalto/40 px-4 py-3 text-left font-semibold dark:border-crema/20">Río y parques</th><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">12 km</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">2 h</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">Fácil</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">45.000</td></tr>
+                                <tr><th scope="row" class="border-2 border-gris-asfalto/40 px-4 py-3 text-left font-semibold dark:border-crema/20">Sabores de barrio</th><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">18 km</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">3 h</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">Medio</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">60.000</td></tr>
+                                <tr><th scope="row" class="border-2 border-gris-asfalto/40 px-4 py-3 text-left font-semibold dark:border-crema/20">Reto Las Palmas</th><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">25 km</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">4 h</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">Difícil</td><td class="border-2 border-gris-asfalto/40 px-4 py-3 dark:border-crema/20">85.000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <a href="reservas.html" class="btn-primario">Reservar ahora</a>
+                    <p class="max-w-3xl leading-relaxed text-gris-asfalto dark:text-crema/80">Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m. Qué llevar: ropa cómoda, agua, protector solar y documento de identidad.</p>
+                    <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Regresar a la página de <a href="inicio.html" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">inicio</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t-2 border-gris-asfalto/40 bg-white dark:border-crema/20 dark:bg-crema/10">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-6 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10">
+            <div class="space-y-2">
+                <p class="font-titulos text-xl font-bold uppercase tracking-wide text-azul-noche dark:text-amarillo-farol">Rueda Libre</p>
+                <p class="text-sm text-gris-asfalto dark:text-crema/80">Alquiler de bicicletas en Medellín.</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Horario</p>
+                <p class="font-semibold">Lunes a domingo, de 8:00 a. m. a 8:00 p. m.</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Contacto</p>
+                <p><a href="mailto:holaruedalibre@gmail.com" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Escribir a holaruedalibre@gmail.com</a></p>
+                <p><a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Escribir por WhatsApp</a></p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Ubicación</p>
+                <p><a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjg1uWv4MmXAxUAAAAAHQAAAAAQCQ..i&amp;channel=fs&amp;client=ubuntu-sn&amp;udm&amp;fvr=1&amp;pvq=CgwvZy8xcHR6aF8wanIiKAoidGllbmRhIGRlIGJpY2ljbGV0YXMgZW4gZWwgcG9ibGFkbxACGAM&amp;lqi=CiJ0aWVuZGEgZGUgYmljaWNsZXRhcyBlbiBlbCBwb2JsYWRvSJeE_ufnlYCACFoyEAAQARACEAMQBBAFGAIiInRpZW5kYSBkZSBiaWNpY2xldGFzIGVuIGVsIHBvYmxhZG-SAQ1iaWN5Y2xlX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJFYnpoTFdYRm5SUkFC-gEECAAQRA&amp;cs=1&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=co&amp;sa=X&amp;ftid=0x8e44284b8a0a7ffb:0x15b79b80bc8778a6" target="_blank" rel="noopener noreferrer" class="font-semibold text-verde-ruta underline hover:text-azul-noche dark:text-amarillo-farol dark:hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">Ver Rueda Libre en Google Maps</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 z-40 rounded-lg bg-azul-noche px-5 py-3 font-titulos font-bold text-crema shadow-lg hover:bg-verde-ruta dark:bg-amarillo-farol dark:text-azul-noche dark:hover:bg-naranja-pedal focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
